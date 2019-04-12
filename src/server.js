@@ -5,7 +5,7 @@ const cors = require("cors")
 
 
 const app = express();
-
+//todos podem acessar minha aplicação
 app.use(cors());
 
 const server = require('http').Server(app);
@@ -34,4 +34,4 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')));
 app.use(require('./routes'));
 
 
-app.listen(4444);
+app.listen(process.env.PORT || 4444);
