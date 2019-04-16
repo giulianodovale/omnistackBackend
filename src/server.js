@@ -34,4 +34,4 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')));
 app.use(require('./routes'));
 
 
-app.listen(process.env.PORT || 4444);
+server.listen(process.env.PORT || 4444);
